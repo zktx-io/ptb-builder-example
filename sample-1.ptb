@@ -1,0 +1,188 @@
+{
+  "version": "1",
+  "network": "devnet",
+  "nodes": [
+    {
+      "id": "@start",
+      "position": {
+        "x": 12,
+        "y": 192
+      },
+      "type": "Start",
+      "data": {
+        "label": "Start"
+      },
+      "measured": {
+        "width": 140,
+        "height": 44
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "@end",
+      "position": {
+        "x": 743.0164190774042,
+        "y": 304.79671618451914
+      },
+      "type": "End",
+      "data": {
+        "label": "End"
+      },
+      "measured": {
+        "width": 140,
+        "height": 44
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "SplitCoins-1733301607770",
+      "position": {
+        "x": 249.01250977326038,
+        "y": 229.39405785770134
+      },
+      "type": "SplitCoins",
+      "data": {
+        "label": "split coins"
+      },
+      "measured": {
+        "width": 180,
+        "height": 44
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "SuiObjectGas-1733302807607",
+      "position": {
+        "x": 12,
+        "y": 12
+      },
+      "type": "SuiObjectGas",
+      "data": {
+        "label": "gas",
+        "value": "gasObject"
+      },
+      "measured": {
+        "width": 180,
+        "height": 28
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "SuiNumberArray-1733302818018",
+      "position": {
+        "x": 12,
+        "y": 102
+      },
+      "type": "SuiNumberArray",
+      "data": {
+        "label": "number[]",
+        "value": [
+          33
+        ]
+      },
+      "measured": {
+        "width": 180,
+        "height": 82
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "TransferObjects-1733302830917",
+      "position": {
+        "x": 484.7326035965599,
+        "y": 349.09773260359657
+      },
+      "type": "TransferObjects",
+      "data": {
+        "label": "transfer objects"
+      },
+      "measured": {
+        "width": 180,
+        "height": 44
+      },
+      "selected": true,
+      "dragging": false
+    },
+    {
+      "id": "SuiAddress-1733302843250",
+      "position": {
+        "x": 358.46207974980456,
+        "y": 55.32525410476935
+      },
+      "type": "SuiAddress",
+      "data": {
+        "label": "address",
+        "value": "0xc3e6cc08fcf052ab32ab85bd237ba3560e120d7df1a512425c99d735cdb35e54"
+      },
+      "measured": {
+        "width": 180,
+        "height": 54
+      },
+      "selected": false,
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "@start",
+      "sourceHandle": "src:process",
+      "target": "SplitCoins-1733301607770",
+      "targetHandle": "tgt:process",
+      "type": "Path",
+      "id": "xy-edge__@startsrc:process-SplitCoins-1733301607770tgt:process"
+    },
+    {
+      "source": "SuiObjectGas-1733302807607",
+      "sourceHandle": "inputs:object",
+      "target": "SplitCoins-1733301607770",
+      "targetHandle": "coin:object",
+      "type": "Data",
+      "id": "xy-edge__SuiObjectGas-1733302807607inputs:object-SplitCoins-1733301607770coin:object"
+    },
+    {
+      "source": "SuiNumberArray-1733302818018",
+      "sourceHandle": "inputs:number[]",
+      "target": "SplitCoins-1733301607770",
+      "targetHandle": "amounts:number[]",
+      "type": "Data",
+      "id": "xy-edge__SuiNumberArray-1733302818018inputs:number[]-SplitCoins-1733301607770amounts:number[]"
+    },
+    {
+      "source": "SplitCoins-1733301607770",
+      "sourceHandle": "src:process",
+      "target": "TransferObjects-1733302830917",
+      "targetHandle": "tgt:process",
+      "type": "Path",
+      "id": "xy-edge__SplitCoins-1733301607770src:process-TransferObjects-1733302830917tgt:process"
+    },
+    {
+      "source": "TransferObjects-1733302830917",
+      "sourceHandle": "src:process",
+      "target": "@end",
+      "targetHandle": "tgt:process",
+      "type": "Path",
+      "id": "xy-edge__TransferObjects-1733302830917src:process-@endtgt:process"
+    },
+    {
+      "source": "SplitCoins-1733301607770",
+      "sourceHandle": "result:object[]",
+      "target": "TransferObjects-1733302830917",
+      "targetHandle": "objects:object[]",
+      "type": "Data",
+      "id": "xy-edge__SplitCoins-1733301607770result:object[]-TransferObjects-1733302830917objects:object[]"
+    },
+    {
+      "source": "SuiAddress-1733302843250",
+      "sourceHandle": "inputs:address",
+      "target": "TransferObjects-1733302830917",
+      "targetHandle": "address:address",
+      "type": "Data",
+      "id": "xy-edge__SuiAddress-1733302843250inputs:address-TransferObjects-1733302830917address:address"
+    }
+  ]
+}
