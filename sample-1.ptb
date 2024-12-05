@@ -5,8 +5,8 @@
     {
       "id": "@start",
       "position": {
-        "x": 12,
-        "y": 192
+        "x": 31.993118561867405,
+        "y": 228.35112465794074
       },
       "type": "Start",
       "data": {
@@ -56,8 +56,8 @@
     {
       "id": "SuiObjectGas-1733302807607",
       "position": {
-        "x": 12,
-        "y": 12
+        "x": 9.273665650654465,
+        "y": 41.98967784280112
       },
       "type": "SuiObjectGas",
       "data": {
@@ -68,7 +68,7 @@
         "width": 180,
         "height": 28
       },
-      "selected": false,
+      "selected": true,
       "dragging": false
     },
     {
@@ -105,7 +105,7 @@
         "width": 180,
         "height": 44
       },
-      "selected": true,
+      "selected": false,
       "dragging": false
     },
     {
